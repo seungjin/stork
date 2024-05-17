@@ -1,0 +1,23 @@
+spin_manifest_version = 2
+
+[application]
+name = "spin-app"
+version = "0.1.0"
+authors = ["Seungjin Kim <seungjin@duck.com>"]
+description = ""
+
+[[trigger.http]]
+route = "/..."
+component = "spin-app"
+
+[component.spin-app]
+source = "service.wasm"
+allowed_outbound_hosts = ["http://*", "https://*"]
+[component.spin-app.build]
+command = "./build.sh"
+watch = ["src/**/*.rs", "Cargo.toml"]
+
+[component.spin-app.tool.spin-test]
+source = "./service.wasm"
+build = "cargo component build --release --target-dir=target"
+workdir = "../spin-test"

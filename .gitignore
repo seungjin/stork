@@ -1,0 +1,10 @@
+*~
+Project.ede
+.idea/
+.vscode/
+target/
+example/target/
+.spin/
+.env
+*.wasm
+bindings.rs

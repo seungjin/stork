@@ -1,0 +1,17 @@
+package seungjin:stork@0.0.1;
+
+world stork {
+    export request;
+    export s3;
+}
+
+
+interface request {
+    get: func(url: string) -> result<string, u32>;
+    //post: func(url: string) -> result<string, u32>;
+}
+
+interface s3 {
+    foo: func() -> string;
+}
+

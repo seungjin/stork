@@ -1,0 +1,6 @@
+package seungjin:spin-app@0.1.0;
+
+world spin-app {
+    import seungjin:stork/request@0.0.1;
+    import seungjin:stork/s3@0.0.1;
+}

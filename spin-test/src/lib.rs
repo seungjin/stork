@@ -5,7 +5,7 @@ use spin_test_sdk::{
 };
 
 #[spin_test]
-fn foo() {
+fn my_test() {
     let a = "apple".to_string();
     assert_eq!("apple".to_string(), a);
 }
